@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: "@project.artifactId@"
+ 
+info:
+ app:
+  java:
+     source: "@java.version@"
+     target: "@java.version@"
+  build:
+   version: "@project.version@"
+   artifactId: "@project.artifactId@"
+ 
+logging:
+  file: ${user.home}/logs/${spring.application.name}.log
+  level:
+    root: WARN
+    com.vzt: INFO
+    com.vzt.api: DEBUG
+    com.vzt.oss.common: DEBUG
+    org.springframework.aop.interceptor.CustomizableTraceInterceptor: TRACE   
+    
+rest:
+  api:
+   title: "@project.artifactId@"
+   description: Decription for spring-boot-docker
+   version: "@project.version@"
+   contact: info@verizon.com
